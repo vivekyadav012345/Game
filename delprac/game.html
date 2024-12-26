@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="game.css">
+    <link href="https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap" rel="stylesheet">
+    <script src="game.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="heading-container">
+            <h2>Rock Paper Scissors</h2>
+            <div class="score-group">
+                <div class="score-container">
+                    <p>Computer Score</p>
+                    <div id="ai-score">0</div>
+                </div>
+                <div class="score-container">
+                    <p>Your Score</p>
+                    <div id="player-score">0</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="game-container">
+            <div id="rock" class="selectable">👊</div>
+            <div id="paper" class="selectable">👋</div>
+            <div id="scissors" class="selectable">✌️</div>
+        </div>
+
+        <div class="winner-container hide">
+            <div id="user-results" class="selectable"></div>
+            <p>You picked</p>
+            <div id="ai-results" class="selectable"></div>
+            <p>AI picked</p>
+            <h2 id="won-text"></h2>
+            <button id="reset">Play Again</button>
+        </div>
+
+        <div class="rules-button">Rules</div>
+        <div class="rules-popup hide">
+            <h3>Game Rules:</h3>
+            <p>1. Rock beats Scissors.</p>
+            <p>2. Scissors beats Paper.</p>
+            <p>3. Paper beats Rock.</p>
+            <button id="close-rules">Close</button>
+        </div>
+    </div>
+</body>
+</html>

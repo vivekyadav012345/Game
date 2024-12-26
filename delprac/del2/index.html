@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="heading-container">
+            <h2>Rock <br> Paper <br> Scissors</h2>
+            <div class="score-group">
+                <div class="score-container ai-score">
+                    <p><pre>Computer<br>Score</pre></p>
+                    <div id="ai-score">0</div>
+                </div>
+                <div class="score-container">
+                    <p><pre>Your   <br>Score</pre></p>
+                    <div id="player-score">0</div>
+                </div>
+            </div>
+        </div>
+        <div class="game-container">
+            <div id="rock" class="selectable rock">👊</div>
+            <div id="paper" class="selectable paper">👋</div>
+            <div id="scissors" class="selectable scissors">✌️</div>
+        </div>
+        <div class="winner-container hide">
+            <div class="selected">
+                <div id="user-results" class="selectable"></div>
+                <p>You picked</p>
+            </div>
+            <div class="selected">
+                <div id="ai-results" class="selectable"></div>
+                <p>AI picked</p>
+            </div>
+            <div class="outcome">
+                <h2 id="won-text"></h2>
+                <button id="next" class="hide">Next</button>
+                <button id="reset">Play Again</button>
+            </div>
+        </div>
+        <div class="hurray-container hide">
+            <h2>Hurray! 🎉</h2>
+            <button id="play-again">Play Again</button>
+        </div>
+        
+        <!-- Rules Button -->
+        <button id="rules-button" class="rules-button">Rules</button>
+
+        <!-- Rules Modal -->
+        <div id="rules-modal" class="rules-modal hide">
+            <div class="rules-content">
+                <h3>Game Rules</h3>
+                <ul>
+                    <li>Rock beats Scissors</li>
+                    <li>Scissors beats Paper</li>
+                    <li>Paper beats Rock</li>
+                    <li>Click on Rock, Paper, or Scissors to play!</li>
+                </ul>
+                <button id="close-rules" class="close-rules">Close</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
