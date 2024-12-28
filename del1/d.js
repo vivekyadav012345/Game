@@ -10,7 +10,11 @@ const reset_game = document.querySelector('#reset');
 const next_button = document.querySelector('#next');
 const hurray_container = document.querySelector('.hurray-container');
 const play_again_button = document.querySelector('#play-again');
+const remhead = document.querySelector('.heading-container');
+const rulebtn = document.querySelector('.rule');
+const rulebox = document.querySelector('.ruleBox');
 
+//rulebox.classList.add('hide');
 const WINNER_COMBO = [
     { selected: 'rock', beats: 'scissors', icon: '👊' },
     { selected: 'paper', beats: 'rock', icon: '👋' },
@@ -42,28 +46,30 @@ function calculateWinner(user, ai) {
         PLAYER_SCORE++;
         localStorage.setItem('playerScore', PLAYER_SCORE); // Save score to localStorage
         player_score_display.textContent = PLAYER_SCORE;
-        updateUI(user, ai, 'You Win!');
+        updateUI(user,  'You Win!',ai);
         next_button.classList.remove('hide'); // Show Next button after win
     } else if (user.selected === ai.selected) {
-        updateUI(user, ai, 'Draw');
+        updateUI(user,  'Draw', ai);
         next_button.classList.add('hide'); // Hide Next button in case of draw
     } else {
         AI_SCORE++;
         localStorage.setItem('aiScore', AI_SCORE); // Save score to localStorage
         ai_score_display.textContent = AI_SCORE;
-        updateUI(user, ai, 'You Lose!');
+        updateUI(user, 'You Lose!',ai);
         next_button.classList.add('hide'); // Hide Next button if player loses
     }
 }
 
-function updateUI(user, ai, outcome_text) {
+function updateUI(user,  outcome_text ,ai) {
     user_results.innerHTML = user.icon;
     user_results.className = `selectable ${user.selected}`;
+    
     ai_results.innerHTML = ai.icon;
     ai_results.className = `selectable ${ai.selected}`;
     won_text.textContent = outcome_text;
     the_game.classList.add('hide');
     display_results.classList.remove('hide');
+   
 }
 
 reset_game.addEventListener('click', () => {
@@ -74,14 +80,23 @@ reset_game.addEventListener('click', () => {
 
 next_button.addEventListener('click', () => {
     // Hide the result and show Hurray message when Next is clicked
+    remhead.classList.add('hide');
+    
     display_results.classList.add('hide');
     hurray_container.classList.remove('hide');
+    
 });
 
 play_again_button.addEventListener('click', () => {
     resetGame();
     hurray_container.classList.add('hide');
     the_game.classList.remove('hide');
+    remhead.classList.remove('hide');
+});
+rulebtn.addEventListener('click', () => {
+    document.getElementById("c21").style.display = "none";
+
+   
 });
 
 function resetRound() {
