@@ -282,6 +282,7 @@
     color: black; /* Text color */
     /* padding: 10px; Padding */
     cursor: pointer;
+    transform: translate(0px, -6px);
   }
   .hurray-message {
     display: none; /* Hidden initially */
@@ -409,7 +410,7 @@
     /* position: absolute; */
     bottom: 0;
     right: 12%;
-    transform: translate(0, 101px);
+    transform: translate(-27px, 97px);
   }
   
   .ruleCont {
@@ -420,8 +421,8 @@
   /* rulebox NONE */
   .ruleBox {
     display: block;
-    width: 303px;
-    height: 400px;
+    width: 216px;
+    height: 376px;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -429,7 +430,8 @@
     padding: 10px 25px;
     border: 10px solid white;
     /* transform: translate(360px, -300px); */
-    position: absolute; /* Set the element to absolute positioning */
+   /* position: absolute; /* Set the element to absolute positioning */
+   transform: translate(-7px, -335px);
     bottom: 10%; /* Align to the bottom */
     right: 1%; /* Align to the right */
   }
@@ -442,7 +444,7 @@
   
   ul {
     font-weight: 400;
-    font-size: 13px;
+    font-size: 9px;
     color: white;
   }
   
@@ -468,9 +470,11 @@
     font-size: 58px;
     border: 6px solid white;
     /* transform: translate(230px, -410px); */
-    position: absolute; /* Set the element to absolute positioning */
+    /*position: absolute; /* Set the element to absolute positioning */
+    transform: translate(115px, -371px);
     bottom: 91%; /* Align to the bottom */
     right: -7%; /* Align to the right */
+    cursor: pointer;
   }
   /* Remove mobile-specific media queries for desktop-only view */
   
